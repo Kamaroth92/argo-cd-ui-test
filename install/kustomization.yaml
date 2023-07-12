@@ -5,7 +5,12 @@ namespace: argocd
 resources:
 # base Argo CD components
 - https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+
 - application-pipeline-controller.yaml
+- extensions-pipeline-controller.yaml
 components:
 # extensions controller component
 - https://github.com/argoproj-labs/argocd-extensions/manifests
+
+patchesStrategicMerge:
+- cm.yaml
