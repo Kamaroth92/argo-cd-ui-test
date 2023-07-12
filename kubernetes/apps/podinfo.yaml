@@ -24,7 +24,7 @@ spec:
       # helm:
       #   values: |
       destination: 
-        server: '{{cluster}}'
+        server: '{{url}}'
         namepsace: '{{cluster}}-podinfo'
       syncPolicy:
         syncOptions:
