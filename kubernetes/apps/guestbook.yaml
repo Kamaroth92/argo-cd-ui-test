@@ -1,12 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: guestbook
+  name: podinfo
 spec:
   generators:
   - list:
       elements:
       - cluster: dev
+        url: https://kubernetes.default.svc
+      - cluster: tst
+        url: https://kubernetes.default.svc
+      - cluster: prod
         url: https://kubernetes.default.svc
         
   template:
