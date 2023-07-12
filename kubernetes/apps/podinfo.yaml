@@ -17,9 +17,10 @@ spec:
       name: '{{cluster}}-podinfo'
     spec:
       project: default
-      chart: podinfo
-      repoURL: https://stefanprodan.github.io/podinfo
-      targetRevision: 6.4.0
+      source: 
+        chart: podinfo
+        repoURL: https://stefanprodan.github.io/podinfo
+        targetRevision: 6.4.0
       # helm:
       #   values: |
       destination: 
