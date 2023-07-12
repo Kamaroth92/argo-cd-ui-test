@@ -25,7 +25,7 @@ spec:
       #   values: |
       destination: 
         server: '{{url}}'
-        namepsace: '{{cluster}}-podinfo'
+        namepsace: '{{cluster}}'
       syncPolicy:
         syncOptions:
           - CreateNamespace=true
