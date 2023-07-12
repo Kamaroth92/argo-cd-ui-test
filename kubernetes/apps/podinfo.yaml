@@ -1,0 +1,33 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: podinfo
+spec:
+  generators:
+  - list:
+      elements:
+      - cluster: dev
+        url: https://kubernetes.default.svc
+      - cluster: tst
+        url: https://kubernetes.default.svc
+      - cluster: prod
+        url: https://kubernetes.default.svc
+  template:
+    metadata:
+      name: '{{cluster}}-podinfo'
+    spec:
+      project: default
+      chart: podinfo
+      repoURL: https://stefanprodan.github.io/podinfo
+      targetRevision: 6.4.0
+      # helm:
+      #   values: |
+      destination: 
+        server: '{{cluster}}'
+        namepsace: '{{cluster}}-podinfo'
+      syncPolicy:
+        syncOptions:
+          - CreateNamespace=true
+        automated:
+          prune: true
+          selfHeal: true
