@@ -3,4 +3,4 @@ kind: Kustomization
 namespace: argocd
 
 resources:
-- appset.yaml
+- argocd-appset-ext.yaml
