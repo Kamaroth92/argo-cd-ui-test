@@ -4,4 +4,4 @@ namespace: argocd
 
 resources:
 - applicationset-health.yaml
-# - hello-world.yaml #This only effects cert resources
+- hello-world.yaml #This only effects cert resources
