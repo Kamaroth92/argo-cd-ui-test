@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: cert-test
+spec:
+  generators:
+  - list:
+      elements:
+      - cluster: dev
+        url: https://kubernetes.default.svc
+        
+  template:
+    metadata:
+      name: '{{cluster}}-cert-test'
+    spec:
+      project: default
+      source:
+        repoURL: https://github.com/Kamaroth92/argo-cd-ui-test.git
+        targetRevision: HEAD
+        path: kubernetes/apps/cert-test
+      destination:
+        server: '{{url}}'
+        namespace: '{{cluster}}'
