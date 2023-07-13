@@ -2,8 +2,8 @@ apiVersion: argoproj.io/v1alpha1
 kind: ArgoCDExtension
 metadata:
   name: hello-world
-  finalizers:
-    - extensions-finalizer.argocd.argoproj.io
+  # finalizers:
+  #   - extensions-finalizer.argocd.argoproj.io
 spec:
   sources:
     - git:
