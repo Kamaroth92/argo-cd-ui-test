@@ -1,12 +1,12 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ArgoCDExtension
 metadata:
-  name: hello-world
+  name: test
   # finalizers:
   #   - extensions-finalizer.argocd.argoproj.io
 spec:
   sources:
-    - git:
-        url: https://github.com/argoproj-labs/argocd-example-extension.git
+    # - git:
+    #     url: https://github.com/argoproj-labs/argocd-example-extension.git
     - web:
-        url: https://github.com/argoproj-labs/argocd-example-extension/releases/download/v0.1.0/extension.tar
+        url: https://github.com/Kamaroth92/argo-cd-ui-test/raw/main/extensions/hello-world/dist/extension.tar
