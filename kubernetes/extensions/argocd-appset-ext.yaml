@@ -10,4 +10,4 @@ metadata:
 spec:
   sources:
     - web:
-        url: https://raw.githubusercontent.com/speedfl/argocd-apps-of-applicationset/master/ui/dist/extension.tar
+        url: https://github.com/Kamaroth92/argo-cd-ui-test/blob/main/extensions/applicationset-health/dist/applicationset-health.tar
