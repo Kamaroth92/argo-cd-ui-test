@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ArgoCDExtension
 metadata:
-  name: application-health
+  name: applicationset-health
   labels:
     tab: "ApplicationSet"
     icon: "fa-circle-info"
@@ -10,4 +10,4 @@ metadata:
 spec:
   sources:
     - web:
-        url: https://github.com/Kamaroth92/argo-cd-ui-test/blob/main/extensions/applicationset-health/dist/applicationset-health.tar
+        url: https://raw.githubusercontent.com/speedfl/argocd-apps-of-applicationset/master/ui/dist/extension.tar
