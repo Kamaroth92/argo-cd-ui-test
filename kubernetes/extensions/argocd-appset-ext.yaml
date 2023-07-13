@@ -4,7 +4,7 @@ metadata:
   name: applicationset-health
   labels:
     tab: "ApplicationSet"
-    icon: "fa-files"
+    icon: "fa-circle-info"
   finalizers:
     - extensions-finalizer.argocd.argoproj.io
 spec:
