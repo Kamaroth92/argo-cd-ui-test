@@ -1,10 +1,10 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ArgoCDExtension
 metadata:
-  name: applicationset-health
+  name: argocd-appset-ext
   labels:
     tab: "ApplicationSet"
-    icon: "fa-circle-info"
+    icon: "fa-files"
   finalizers:
     - extensions-finalizer.argocd.argoproj.io
 spec:
