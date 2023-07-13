@@ -1,3 +1,2 @@
-**/dist/**
-!**/dist/**.tar
+!**/*.tar
 **/node_modules

@@ -10,7 +10,7 @@ const config = {
     filename: 'extensions.js',
     path: __dirname + `/dist/resources/${groupKind}/ui`,
     libraryTarget: 'window',
-    library: ['extensionsAPI', 'registerResourceExtension', groupKind],
+    library: ['extensions', 'resources', groupKind],
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.json', '.ttf', '.scss'],
