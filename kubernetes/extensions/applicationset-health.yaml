@@ -5,8 +5,8 @@ metadata:
   labels:
     tab: "ApplicationSet"
     icon: "fa-book"
-  # finalizers:
-  #   - extensions-finalizer.argocd.argoproj.io
+  finalizers:
+    - extensions-finalizer.argocd.argoproj.io
 spec:
   sources:
     - web:
