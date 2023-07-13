@@ -1,6 +1,6 @@
 const path = require('path');
 
-const groupKind = 'argoproj.io/ApplicationSet';
+const groupKind = 'argoproj.io/Application';
 
 const config = {
   entry: {
@@ -10,7 +10,7 @@ const config = {
     filename: 'extensions.js',
     path: __dirname + `/dist/resources/${groupKind}/ui`,
     libraryTarget: 'window',
-    library: ['extensionsAPI', 'registerResourceExtension', groupKind],
+    library: ['extensions', 'resources', groupKind],
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.json', '.ttf', '.scss'],
