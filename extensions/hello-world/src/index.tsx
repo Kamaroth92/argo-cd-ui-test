@@ -14,14 +14,14 @@ declare global {
       tree: any;
       resource: any;
     }) => {
-    return React.createElement("div", {}, `Hello ${props.resource.metadata.name}`);
+    return React.createElement("div", {}, `Hello World.`);
   };
   // Sidebar Tab
   const systemComponent = () => {
     return React.createElement(
       "div",
       { style: { padding: "10px" } },
-      "Hello World"
+      "Hello World!"
     );
   };
 
@@ -34,8 +34,8 @@ declare global {
   );
   window.extensionsAPI.registerSystemLevelExtension(
     systemComponent,
-    "SK8S Information",
-    "/sk8s-info",
-    "fa-person-skating"
+    "Hello World",
+    "/hello-world",
+    "fa-book"
   );
 })(window);

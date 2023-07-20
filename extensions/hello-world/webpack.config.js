@@ -1,4 +1,4 @@
-const name = "helloWorld"
+const name = "sk8s-panel"
 
 const path = require('path');
 
