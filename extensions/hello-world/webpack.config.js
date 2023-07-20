@@ -1,6 +1,8 @@
+const name = "helloWorld"
+
 const path = require('path');
 
-const groupKind = 'cert-manager.io/Certificate';
+// const groupKind = 'cert-manager.io/Certificate';
 
 const config = {
   entry: {
@@ -8,9 +10,12 @@ const config = {
   },
   output: {
     filename: 'extensions.js',
-    path: __dirname + `/dist/resources/${groupKind}/ui`,
+    path: __dirname + `/dist/resources/${name}`,
     libraryTarget: 'window',
-    library: ['extensionsAPI', 'registerResourceExtension'],
+    // library: ['extensionsApi'],
+  },
+  optimization: {
+    minimize: true
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.json', '.ttf'],

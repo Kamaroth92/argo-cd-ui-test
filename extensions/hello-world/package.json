@@ -1,5 +1,5 @@
 {
-  "name": "cert-manager",
+  "name": "myApp",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -19,5 +19,8 @@
     "typescript": "^4.4.3",
     "webpack": "^4.7.2",
     "webpack-cli": "^4.7.2"
+  },
+  "optimization": {
+    "minimize": false
   }
 }
